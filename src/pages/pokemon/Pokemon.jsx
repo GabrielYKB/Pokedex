@@ -11,32 +11,46 @@ export default function Pokemon() {
             <div className="flex gap-2 justify-center text-3xl mb-10 mt-3">
                 <h2>{pokemon.name}</h2> <h2 className="text-gray-500">#{id}</h2>
             </div>
-            <div className="flex justify-center gap-6 items-end">
-                <img
-                    src={pokemon.sprites.front_default}
-                    className="w-72"
-                    alt=""
-                />
-                <div className="flex gap-3 bg-cyan-200 rounded-lg p-4 h-24">
-                    <div>
-                        <h2>Height</h2>
-                        <h2>{pokemon.height * 10} CM</h2>
+            <div className="flex-col flex items-center">
+                <div className=" ">
+                    <img
+                        src={pokemon.sprites.front_default}
+                        className="w-96"
+                        alt=""
+                    />
+                    <div className="bg-blue-500 rounded-lg p-4 w-96 h-48 flex flex-col justify-evenly text-white">
+                        <div className="flex gap-5">
+                            <div className="mb-2">
+                                <span className="font-bold">Height: </span>
+                                {pokemon.height * 10} CM
+                            </div>
+                            <div className="mb-2">
+                                <span className="font-bold">Weight: </span>
+                                {pokemon.weight / 10} KG
+                            </div>
+                        </div>
+                        <div className="flex gap-5">
+                            <div className="mb-2">
+                                <span className="font-bold">Category: </span>
+                            </div>
+                            <div>
+                                <span className="font-bold">Abilities: </span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h2>Weight</h2>
-                        <h2>{pokemon.weight / 10} KG</h2>
-                    </div>
-                    <div>
-                        <h2>Category</h2>
-                        <h2></h2>
-                    </div>
-                    <div>
-                        <h2>Types</h2>
-                        <h2>{}</h2>
-                    </div>
-                    <div>
-                        <h2>Gender</h2>
-                    </div>
+                </div>
+                <div>Type</div>{" "}
+                <p className="bg-orange-500 px-4 rounded-md">Fire</p>
+                <div>Weaknesses</div>
+                <p className="bg-orange-500 px-4 rounded-md">Fire</p>
+                Stats
+                <div className="flex gap-2 ">
+                    <p>HP</p>
+                    <p>Attack</p>
+                    <p>Defense</p>
+                    <p>Special Attack</p>
+                    <p>Special Defense</p>
+                    <p>Speed</p>
                 </div>
             </div>
             <div>
