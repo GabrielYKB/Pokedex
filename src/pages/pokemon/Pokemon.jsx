@@ -12,13 +12,13 @@ export default function Pokemon() {
                 <h2>{pokemon.name}</h2> <h2 className="text-gray-500">#{id}</h2>
             </div>
             <div className="flex-col flex items-center">
-                <div className=" ">
+                <div className="flex flex-col items-center">
                     <img
                         src={pokemon.sprites.front_default}
                         className="w-96"
                         alt=""
                     />
-                    <div className="bg-blue-500 rounded-lg p-4 w-96 h-48 flex flex-col justify-evenly text-white">
+                    <div className="bg-blue-500 rounded-lg p-4 w-80  h-48 flex flex-col justify-evenly text-white ">
                         <div className="flex gap-5">
                             <div className="mb-2">
                                 <span className="font-bold">Height: </span>
@@ -39,9 +39,11 @@ export default function Pokemon() {
                         </div>
                     </div>
                 </div>
-                <div>Type</div>{" "}
-                <p className="bg-orange-500 px-4 rounded-md">Fire</p>
-                <div>Weaknesses</div>
+                <div className="flex flex-col ">
+                    <p>Type</p>
+                    <p className="bg-orange-500 px-4 rounded-md">Fire</p>
+                </div>
+                Weaknesses
                 <p className="bg-orange-500 px-4 rounded-md">Fire</p>
                 Stats
                 <div className="flex gap-2 ">
@@ -54,7 +56,7 @@ export default function Pokemon() {
                 </div>
             </div>
             <div>
-                <Link to="/pokemon">Back</Link>
+                <Link to="/">Back</Link>
             </div>
         </div>
     );
