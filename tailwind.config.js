@@ -3,11 +3,18 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            keyframes: {
+                "bounce-once": {
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(-5px)" },
+                },
+            },
             animation: {
-                "bounce-fast": "bounce 0.6s ",
+                "bounce-once": "bounce-once 0.2s",
             },
         },
     },
+
     plugins: [
         // ...
         require("@tailwindcss/aspect-ratio"),

@@ -29,12 +29,12 @@ export default function PokemonCard({ name, url }) {
 
     return (
         <a
-            className="pokemon-card bg-white flex flex-col hover:animate-bounce-fast items-center justify-evenly h-52 w-48 rounded-lg border-2 border-gray-400 hover:animate-jump"
+            className="pokemon-card bg-white flex flex-col hover:animate-bounce-once items-center justify-evenly h-52 w-48 rounded-lg border-2 border-gray-400"
             href={`http://localhost:5173/pokemon/${id}`}
         >
             <img src={image} alt={name} className="h-32" />
             <div className="flex gap-1">
-                <p>{name.charAt(0).toUpperCase() + name.slice(1)} </p>
+                <p>{name.charAt(0).toUpperCase() + name.slice(1)}</p>
                 <p className="text-gray-500">#{id}</p>
             </div>
         </a>
