@@ -7,7 +7,7 @@ export default function Home() {
     console.log(pokemons);
     return (
         <div className="bg-blue-300">
-            <div className="bg-red-800 ">
+            <div className="bg-red-800">
                 <form action="">
                     <input className="bg-gray-400" type="text" name="" id="" />
                 </form>
@@ -23,7 +23,7 @@ export default function Home() {
     );
 }
 export const getFirst20Pokemon = async () => {
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=72");
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=70");
     if (!res.ok) {
         throw Error("Det gick inte att hämta profilerna");
     }

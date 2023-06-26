@@ -29,7 +29,7 @@ export default function PokemonCard({ name, url }) {
 
     return (
         <a
-            className="bg-white flex flex-col items-center justify-evenly h-52 w-48 rounded-lg border-2 border-gray-400"
+            className="pokemon-card bg-white flex flex-col hover:animate-bounce-fast items-center justify-evenly h-52 w-48 rounded-lg border-2 border-gray-400 hover:animate-jump"
             href={`http://localhost:5173/pokemon/${id}`}
         >
             <img src={image} alt={name} className="h-32" />

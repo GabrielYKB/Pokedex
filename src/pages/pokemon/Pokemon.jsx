@@ -11,7 +11,7 @@ export default function Pokemon() {
             <div className="flex gap-2 justify-center text-3xl mb-10 mt-3">
                 <h2>{pokemon.name}</h2> <h2 className="text-gray-500">#{id}</h2>
             </div>
-            <div className="flex-col flex items-center">
+            <div className="flex-col flex items-center bg-red-500">
                 <div className="flex flex-col items-center">
                     <img
                         src={pokemon.sprites.front_default}
@@ -55,8 +55,13 @@ export default function Pokemon() {
                     <p>Speed</p>
                 </div>
             </div>
-            <div>
-                <Link to="/">Back</Link>
+            <div className="bg-green-500 flex justify-between p-4">
+                {id > 1 && (
+                    <Link to={`/pokemon/${parseInt(id, 10) - 1}`}>
+                        Previous
+                    </Link>
+                )}
+                <Link to={`/pokemon/${parseInt(id, 10) + 1}`}>Next</Link>
             </div>
         </div>
     );
